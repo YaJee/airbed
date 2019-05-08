@@ -69,3 +69,52 @@ airbed coding
        * 对于remove()函数，判断是否col==0，如果col == 0,则删除上一行最后一个元素，
          否则删本行上一个元素即可。如果删除元素后导致元素所在行空了，则删除所在行。
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/vector2d_iterator/Vector2DIterator.java)
+
+### 题目5：DisplayPage(将搜索结果分页)
+       * 实现分页显示。
+       * 给了以下一些输入数据，要求将以下行分页显示，每页x行，其中每行已经按score排好序，
+       * 分页显示的时候如果有相同host_id的行，则将后面同host id的行移到下一页。
+       * 每行的数据代表："host_id,listing_id,score,city"
+       * 示例 1:
+        输入：
+           [
+               "1,28,310.6,SF",
+               "4,5,204.1,SF",
+               "20,7,203.2,Oakland",
+               "6,8,202.2,SF",
+               "6,10,199.1,SF",
+               "1,16,190.4,SF",
+               "6,29,185.2,SF",
+               "7,20,180.1,SF",
+               "6,21,162.1,SF",
+               "2,18,161.2,SF",
+               "2,30,149.1,SF",
+               "3,76,146.2,SF",
+               "2,14,141.1,San Jose"
+           ]
+         输出：（3页）
+             1,28,310.6,SF
+             4,5,204.1,SF
+             20,7,203.2,Oakland
+             6,8,202.2,SF
+             7,20,180.1,SF
+              
+             6,10,199.1,SF
+             1,16,190.4,SF
+             2,18,161.2,SF
+             3,76,146.2,SF
+             6,29,185.2,SF
+              
+             6,21,162.1,SF
+             2,30,149.1,SF
+             2,14,141.1,San Jose
+             
+##### 思路： 
+        * 定义set：记录 当前页 的重复host_id
+        * 定义res：用于添加记录作为返回值
+        * 定义reachEnd：标记 是否遍历到input最后一个元素
+        过程：
+        * 遍历input,优先将set中不存在的记录添加进 res;
+        * 如果遍历到最后一个，重新设置遍历器，并将reachEnd = ture
+        * 当reachEnd = ture，无论set中是否存在，都将记录加入res;
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/display_page/DisplayPage.java)
