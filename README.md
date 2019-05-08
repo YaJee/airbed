@@ -53,3 +53,19 @@ airbed coding
       
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/round_prices/RoundPrices.java)
 
+
+### 题目4：Vector2DIterator(实现二维数组遍历器)
+        * 给定一个二维数组，实现一个遍历类，允许遍历和删除数组中的元素
+        * 需提供三个方法：
+          boolean hasNext()： 如果还有下一个元素返回true,否则false
+          int next() ：返回数组的下一个元素
+          void remove()： 删除上一次next()操作时返回的元素。
+##### 思路：         
+       * 维护两个变量row和col，将row和col初始化为0;
+       * 对于next函数，获得返回值后，执行后移操作：检查当前row是否小于总行数，col是否>=当前行的列数，
+         如果都成立，说明要转到下一行，则row自增1，col初始化为0;
+       * 对于 hasNext 函数，检查当前row是否<总行数，col是否<当前行的列数，
+         如果都成立返回true,否则返回flase
+       * 对于remove()函数，判断是否col==0，如果col == 0,则删除上一行最后一个元素，
+         否则删本行上一个元素即可。如果删除元素后导致元素所在行空了，则删除所在行。
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/vector2d_iterator/Vector2DIterator.java)
