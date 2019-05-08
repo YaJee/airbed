@@ -10,6 +10,29 @@ airbed coding
 ##### 思路：分为奇数、偶数两种情况---递归计算
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/collatz_conjecture/CollatzConjecture.java)
 
+### 题目2：PalindromePairs（回文对，leetcode336）
+        * 给定一组唯一的单词， 找出所有不同 的索引对(i, j)，
+          使得列表中的两个单词， words[i] + words[j] ，可拼接成回文串。
+               
+        * 示例 1:
+            输入: ["abcd","dcba","lls","s","sssll"]
+            输出: [[0,1],[1,0],[3,2],[2,4]] 
+            解释: 可拼接成的回文串为 ["dcbaabcd","abcddcba","slls","llssssll"]
+        * 示例 2:
+            输入: ["bat","tab","cat"]
+            输出: [[0,1],[1,0]] 
+            解释: 可拼接成的回文串为 ["battab","tabbat"]
+            
+            
+##### 思路：
+        * step1 : 使用map 存储每一个 单词 和 下标
+        * step2 : 对于数组中每一个单词，分割为str1 str2 两部分。检查str1 str2是否是 回文串
+                  如果 str1 是回文串，使用str1 作为中间部分，str2作为右部分，查看map中是否包含str2的逆串。
+                  如果包含，则使用这个字符串作为左部分，与中、右组成回文串。
+        * step3 : 对str2左同样操作（str2作为中间部分）
+        
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/palindrome_paires/PalindromePairs.java)
+
 
 
 ### 题目3：RoundPrices（价格取整）
