@@ -118,3 +118,18 @@ airbed coding
         * 如果遍历到最后一个，重新设置遍历器，并将reachEnd = ture
         * 当reachEnd = ture，无论set中是否存在，都将记录加入res;
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/display_page/DisplayPage.java)
+
+### 题目6：MenuCombinationSum菜单价格组合（消费K元的组合）
+        * 给定一个菜单价格列表，找出所有的可能使菜单价格的组合等于一个给定的价格K.
+        * 示例 1:
+        输入：
+            [10.02, 1.11, 2.22, 3.01, 4.02, 2.00, 5.03]
+        输出：
+            [[3.01, 4.02], 
+             [2.0, 5.03]
+            ]
+##### 思路：    
+     * step1 : 把菜单价格*100转成整数
+     * step2 : 回溯法   
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/menu_combination_sum/MenuCombinationSum.java)
+    
