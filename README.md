@@ -133,3 +133,36 @@ airbed coding
      * step2 : 回溯法   
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/menu_combination_sum/MenuCombinationSum.java)
     
+### 题目7：Sliding Puzzle（移动谜题）
+         * leetcode773
+         * 在一个 2 x 3 的板上（board）有 5 块砖瓦，用数字 1~5 来表示, 以及一块空缺用 0 来表示.
+         * 一次移动定义为选择 0 与一个相邻的数字（上下左右）进行交换.
+         * 最终当板 board 的结果是 [[1,2,3],[4,5,0]] 谜板被解开。
+         * 任务一：给出一个谜板的初始状态，返回最少可以通过多少次移动解开谜板，如果不能解开谜板，则返回 -1 。
+           int canSlove(int[][] board)
+         * 任务二：如果能解开谜题，则返回移动路径
+           List<String> getPath(int[][] board)
+           
+         *示例1:
+           输入：board = [[1,2,3],[5,4,0]]
+           输出：-1
+           解释：没有办法完成谜板
+         *示例2:
+           输入：board = [[4,1,2],[5,0,3]]
+           输出1：5
+           输出2：[left, up, right, right, down]
+           
+##### 思路：
+       * 函数1：int canSlove(int[][] board)
+         1.将二维数组 映射到 一维空间，即映射为字符串
+         2.将 board 中的 每一个状态 都作为图的一个节点
+         3.则只需要找到 start 到 target 最短距离 即可；target : "123450"
+         4.采用BFS,每次在字符串中交换"0"和其他能到达的位置，并用hashset存储这个状态
+       
+       * 函数2： List<String> getPath(int[][] board)
+         1.将二维数组 映射到 一维空间，即映射为字符串
+         2.将 board 中的 每一个状态 都作为图的一个节点
+         3.则只需要找到 start 到 target 最短距离对应的路径 即可；target : "123450"
+         4.采用BFS,每次在字符串中交换"0"和其他能到达的位置，并用hashset存储这个状态，用Queue存储这个状态对应的路径
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/sliding_puzzle/SlidingPuzzle.java)
+             
