@@ -181,3 +181,21 @@ airbed coding
          或
        * 迪杰斯特拉       
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/ten_wizards/TenWizards.java)
+
+### 题目9：meeting time（员工开会）
+       * 每个员工可能参加多场会议，现给定每个员工要参加的会议的开始、结束时间，输出所有员工都空闲的时间间隔。
+       * 示例1:
+        输入：[
+                [ [1, 3], [6, 7]],  //员工1 要参加都会议时间
+                [ [2, 4]],          //员工2
+                 [ [2, 3], [9, 12]]  //员工2
+             ],
+             3                      //3位员工
+        输出:[[4, 6], [7, 9]]     //所有员工都空闲都时间
+##### 思路：
+        *  1.将所有interval(会议) 提取到list中
+        *  2.对list排序 : 按 会议开始时间 升序
+        *  3.对list 合并区间,将有时间重叠的会议合并起来
+        *  4.找出空隙
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/meeting_time/MeetingTime.java)
+    
