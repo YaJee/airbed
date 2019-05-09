@@ -10,7 +10,7 @@ airbed coding
 ##### 思路：分为奇数、偶数两种情况---递归计算
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/collatz_conjecture/CollatzConjecture.java)
 
-### 题目2：PalindromePairs（回文对，leetcode336）
+### 题目2：PalindromePairs 回文对 (leetcode336）
         * 给定一组唯一的单词， 找出所有不同 的索引对(i, j)，
           使得列表中的两个单词， words[i] + words[j] ，可拼接成回文串。
                
@@ -35,7 +35,7 @@ airbed coding
 
 
 
-### 题目3：RoundPrices（价格取整）
+### 题目3：RoundPrices（价格取整）（leetcode560 plus）
         * 在美团上订一家酒店的费用包括（基础价格 + 服务费 + 清洁费...等等）
         * 给定费用数组X（浮点数数组）例如：30.9，2.4，3.9
         * 现在允许你对每个价格进行向上取整（ceil）或者向下取整（floor）操作
@@ -54,7 +54,7 @@ airbed coding
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/round_prices/RoundPrices.java)
 
 
-### 题目4：Vector2DIterator(实现二维数组遍历器)
+### 题目4：Vector2DIterator(实现二维数组遍历器)(leetcode251 plus)
         * 给定一个二维数组，实现一个遍历类，允许遍历和删除数组中的元素
         * 需提供三个方法：
           boolean hasNext()： 如果还有下一个元素返回true,否则false
@@ -119,7 +119,7 @@ airbed coding
         * 当reachEnd = ture，无论set中是否存在，都将记录加入res;
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/display_page/DisplayPage.java)
 
-### 题目6：MenuCombinationSum菜单价格组合（消费K元的组合）
+### 题目6：MenuCombinationSum菜单价格组合（消费K元的组合）(leetcode40 plus)
         * 给定一个菜单价格列表，找出所有的可能组合，使菜单价格的组合和等于一个给定的价格K.
         * 示例 1:
          输入：
@@ -133,8 +133,7 @@ airbed coding
      * step2 : 回溯法   
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/menu_combination_sum/MenuCombinationSum.java)
     
-### 题目7：Sliding Puzzle（移动谜题）
-         * leetcode773
+### 题目7：Sliding Puzzle（移动谜题）(leetcode773 plus)
          * 在一个 2 x 3 的板上（board）有 5 块砖瓦，用数字 1~5 来表示, 以及一块空缺用 0 来表示.
          * 一次移动定义为选择 0 与一个相邻的数字（上下左右）进行交换.
          * 最终当板 board 的结果是 [[1,2,3],[4,5,0]] 谜板被解开。
