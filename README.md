@@ -164,4 +164,20 @@ airbed coding
          3.则只需要找到 start 到 target 最短距离对应的路径 即可；target : "123450"
          4.采用BFS,每次在字符串中交换"0"和其他能到达的位置，并用hashset存储这个状态，用Queue存储这个状态对应的路径
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/sliding_puzzle/SlidingPuzzle.java)
-             
+
+### 题目8：10 Wizards（10个向导）（单源最短路径问题）
+       * 10个向导，0-9，现在给出每个向导能到达的向导列表。
+       * 定义：一个向导到另一个向导到距离为 下标差的平方。
+       * 求向导0到向导9的最短距离。   
+       
+       * 示例1:
+         输入：wizards(二维数组)
+              wizards[0] : [ 1, 4, 5]		（向导0，能到达 1，4，5）
+              wizards[4] : [ 9 ]			（向导4，能到达 9）
+         输出：[0, 4, 9]                      (0到9的最短路径)
+         解释：(0-4)^2+(4-9)^2=41 (wizards[0]->wizards[4]->wizards[9])
+##### 思路： 
+       * BFS 
+         或
+       * 迪杰斯特拉       
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/ten_wizards/TenWizards.java)
