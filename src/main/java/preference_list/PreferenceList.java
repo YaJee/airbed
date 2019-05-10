@@ -1,4 +1,4 @@
-package main.java.preferece_list;
+package main.java.preference_list;
 
 
 
