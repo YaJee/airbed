@@ -261,7 +261,7 @@ airbed coding
         * 4. p.charAt(j) ！= '*' && p.charAt(j) ！= '+'    : dp[i][j] = false;	//这种情况 dp[i][j] = false
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/regular_expression/RegularExpression.java)
    
-### 题目10：alien dictionary(另类字典）leetcode 269
+### 题目11：alien dictionary(另类字典）leetcode 269
         * 有一种新的语言由拉丁字母组成，不过字母顺序我们不知道啊，现给定一个按照外星字典序排列的单词列表，请推导出外星字典序   
         * 示例 1:
             输入:
@@ -300,4 +300,20 @@ airbed coding
         2.拓扑排序
           * 对这个图拓扑排序，然后将遍历路径保存下来返回即可
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/alien_dictionary/AlienDictionary.java)
+  
+### 题目12：Preference List(爱好列表)（leetcode269 plus）
+        * 每个人都有一个preference的排序，在不违反每个人的preference顺序的情况下得到总体的preference的排序 
+        * 示例 1 
+            输入:
+                 [
+                    [3, 5, 7, 9], 
+                    [2, 3, 8], 
+                    [5, 8]
+                ] 
+            输出：
+                [2, 3, 5, 8, 7, 9].	//这是其中一个可能，[2, 3, 5, 7, 8, 9]，[2, 3, 5, 8, 9,7]同样可以
+        * 与11题的区别：
+            11题中input[i]和input[i+1]有顺序要求，本题中没有 
+##### 思路：构建有向图 + 拓扑排序       
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/preference_list/PreferenceList.java)
   

@@ -34,6 +34,7 @@ public class AlienDictionary {
             for(; j < len; j++){
                 char c1 = w1.charAt(j);
                 char c2 = w2.charAt(j);
+
                 if(c1 != c2){     //只能进入一次
                     Set<Character> set = adj.get(c1);
                     if(set == null){
