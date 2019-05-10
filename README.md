@@ -244,18 +244,19 @@ airbed coding
         * 1, If p.charAt(j) == s.charAt(i) 		:  dp[i][j] = dp[i-1][j-1];
         * 2, If p.charAt(j) == '.' 	 	 	:  dp[i][j] = dp[i-1][j-1];
         * 3, If p.charAt(j) == '*' || If p.charAt(j) == '+': 			//这种情况，还有可能使dp[i][j] = true
-                1,if p.charAt(i-1) == s.charAt(i) or p.charAt(i-1) == '.':
+               细分为两种情况：
+               1,if p.charAt(i-1) == s.charAt(i) or p.charAt(i-1) == '.':
                     ■ if p.charAt(j) == '*':
-                            dp[i][j] = dp[i-1][j]    //例子:如果p为 ab*, 则视为abb* 	//重复多次
+                           dp[i][j] = dp[i-1][j]    //例子:如果p为 ab*, 则视为abb* 	//重复多次
                         or dp[i][j] = dp[i][j-1]     //例子:如果p为 ab*, 则视为ab		//重复1次
                         or dp[i][j] = dp[i][j-2]     //例子:如果p为 ab*, 则视为a		//重复0次
                     ■ if p.charAt(j) == '+':
-    	                    dp[i][j] = dp[i-1][j]    //例子:如果p为 ab*, 则视为abb+   //重复多次
+                           dp[i][j] = dp[i-1][j]    //例子:如果p为 ab*, 则视为abb+   //重复多次
  	                    or dp[i][j] = dp[i][j-1]     //例子:如果p为 ab+, 则视为ab	    //重复1次
                2,if p.charAt(j-1) != s.charAt(i) : 
                     ■ if p.charAt(j) == '*':
                            dp[i][j] = dp[i][j-2]     //例子:如果p为 ab*, 则视为a	    //重复0次
-                     ■ if p.charAt(j) == '+':
+                    ■ if p.charAt(j) == '+':
                            dp[i][j] = false       				                //这种情况 dp[i][j] = false          
         * 4. p.charAt(j) ！= '*' && p.charAt(j) ！= '+'    : dp[i][j] = false;	//这种情况 dp[i][j] = false
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/regular_expression/RegularExpression.java)
