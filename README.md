@@ -317,3 +317,24 @@ airbed coding
 ##### 思路：构建有向图 + 拓扑排序       
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/preference_list/PreferenceList.java)
   
+### 题目13：Travel Buddy 旅行同伴）
+        * 你有一个旅行清单，你的朋友们也有他们各自的旅行清单，
+        * 问题1:如果一个朋友的旅行清单中，超过50%与你重复，则他成为你的旅行伙伴
+        * 问题2:推荐旅行城市，输入k,在你的旅行伙伴的清单中推荐k个城市给你，优先推荐相似率最高的伙伴的城市。
+        * 示例 1 
+            输入:
+                [
+                    {"a", "b", "c", "d"};			//your list 
+                    {"a", "b", "e", "f"};			//f1 list 相似度 2/4
+                    {"a", "c", "d", "g"};			//f2 list 相似度 3/4
+                    {"c", "f", "e", "g"};			//f3 list 相似度 1/4
+                ],
+                10							        //推荐10个城市
+            输出：
+                [f2, f1]						//伙伴列表
+                [g, e, f]						//推荐的城市列表，只能推荐3个
+##### 思路：  
+        * 旅行伙伴：按相似度排序即可
+        * 推荐城市：从伙伴城市列表取取 mylist中不存在并且reslist中也不存在的即可
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/travel_buddy/TravelBuddy.java)
+  
