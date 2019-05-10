@@ -260,4 +260,44 @@ airbed coding
                            dp[i][j] = false       				                //这种情况 dp[i][j] = false          
         * 4. p.charAt(j) ！= '*' && p.charAt(j) ！= '+'    : dp[i][j] = false;	//这种情况 dp[i][j] = false
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/regular_expression/RegularExpression.java)
-      
+   
+### 题目10：alien dictionary(另类字典）leetcode 269
+        * 有一种新的语言由拉丁字母组成，不过字母顺序我们不知道啊，现给定一个按照外星字典序排列的单词列表，请推导出外星字典序   
+        * 示例 1:
+            输入:
+                [
+                  "wrt",
+                  "wrf",
+                  "er",
+                  "ett",
+                  "rftt"
+                ]
+            输出: "wertf"
+        * 示例 2:
+            输入:
+                [
+                  "z",
+                  "x"
+                ]
+            输出: "zx"     
+        * 示例 3:
+            输入:
+                [
+                  "z",
+                  "x",
+                  "z"
+                ]  
+            输出: "" 
+            解释: 顺序无效, return "".
+##### 思路：构建有向图 + 拓扑排序
+        1.建立图
+          * 比如题目中给的例子1，我们可以推出的顺序关系有：
+            t->f
+            w->e
+            r->t
+            e->r
+          * 这些就是有向图的边，对于有向图中的每个结点，计算其入度.
+        2.拓扑排序
+          * 对这个图拓扑排序，然后将遍历路径保存下来返回即可
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/alien_dictionary/AlienDictionary.java)
+  
