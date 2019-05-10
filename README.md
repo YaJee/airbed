@@ -338,3 +338,22 @@ airbed coding
         * 推荐城市：从伙伴城市列表取取 mylist中不存在并且reslist中也不存在的即可
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/travel_buddy/TravelBuddy.java)
   
+### 题目14：Flight list(最多中转k次到达目的地的最小代价)）
+        * 每一个航班包括departure（出发地）, arrival（目的地）, cost（成本），然后给一个整数k, 表示最多允许k次中转。给定起始地点A，到达地点B, 要求输出从A到B的最小花费
+        *示例 1 
+            输入:
+             [
+                "A->B,100",
+                "A->C,400",
+                "B->C,100",
+                "C->D,100",
+                "C->A,10"
+             ],
+             [A,D],		//起点A，终点D
+             1			//允许中转一次
+            输出：
+                500
+            解释：A->C->D : 成本为500
+##### 思路： BFS
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/flight_list/FlightList.java)
+  
