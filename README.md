@@ -401,4 +401,13 @@ airbed coding
               2. 如果是最后一行，分隔符是" "。
               3. 否则，计算单词间的间隔（取整），如果有多余空格（取余），顺序添加到间隔中（每次一个），直到用完。
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/text_justification/TextJustification.java)
-                         
+      
+### 题目17：Implement  queue with limited size of array（实现队列）
+        * 使用固定大小的数组，实现队列QueueWithFixedArray,通过构造函数传入array的大小
+          ● offer(int num)
+          ● poll()
+          ● size()
+##### 思路：
+  
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/implement_queue_with_fixedArray/ImplementQueueWithFixedArray.java)
+                  
