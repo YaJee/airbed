@@ -411,7 +411,7 @@ airbed coding
   ![imaage text](https://github.com/YaJee/airbed/blob/master/img/ImplQueueWithFixedArray.png)
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/implement_queue_with_fixedArray/ImplementQueueWithFixedArray.java)
  
-### 题目18：=file system （实现文件系统类）  
+### 题目18：file system （实现文件系统类）  
         * 实现文件系统类,包含create()和get()方法
           ● create("/a",1)
           ● get("/a") //get 1
@@ -422,4 +422,18 @@ airbed coding
 ##### 思路：
         * 使用Map<String, Integer>来保存路径和值         
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/file_system/FileSystem.java)
-      
+ 
+### 题目19：IP Range to CIDR（将ip范围，转换为掩码）
+        * 给出一个ipv4的range，找出最少的cidr(掩码)可以覆盖这个range内的所有ip。
+        *示例:
+            输入:
+                "255.0.0.7",10			//"255.0.0.7" -> "255.0.0.16"
+            输出:
+                [
+                    "255.0.0.7/32",
+                    "255.0.0.8/29",
+                    "255.0.0.16/32"
+                ]
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/ip_range_to_cidr/IPRangeToCIDR.java)
+ 
+         
