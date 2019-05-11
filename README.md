@@ -408,6 +408,6 @@ airbed coding
           ● poll()
           ● size()
 ##### 思路：
-  
+  ![imaage text](https://github.com/YaJee/airbed/blob/master/img/ImplQueueWithFixedArray.png)
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/implement_queue_with_fixedArray/ImplementQueueWithFixedArray.java)
                   
