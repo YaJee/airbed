@@ -410,4 +410,16 @@ airbed coding
 ##### 思路：
   ![imaage text](https://github.com/YaJee/airbed/blob/master/img/ImplQueueWithFixedArray.png)
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/implement_queue_with_fixedArray/ImplementQueueWithFixedArray.java)
-                  
+ 
+### 题目18：=file system （实现文件系统类）  
+        * 实现文件系统类,包含create()和get()方法
+          ● create("/a",1)
+          ● get("/a") //get 1
+          ● create("/a/b",2)
+          ● get("/a/b") //get 2
+          ● create("/c/d",1) //Error, because "/c" is not existed
+          ● get("/c") //Error, because "/c" is not existed  
+##### 思路：
+        * 使用Map<String, Integer>来保存路径和值         
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/file_system/FileSystem.java)
+      
