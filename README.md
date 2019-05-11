@@ -357,3 +357,19 @@ airbed coding
 ##### 思路： BFS
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/flight_list/FlightList.java)
   
+### 题目14：find median from large file of integers(在大整数文件中找到中位数)
+        * 在大整数文件中找到中位数,文件的大小大于计算机内存。
+##### 思路： 
+        思路：
+        
+        * 因为是整数文件，所以就确定了 数值的边界，min: Integer.MIN_VALUE; max: Integer.MAX_VALUE
+         
+        * 二分法：
+            1.设定最小值为 min, 最大值为 max，num = (min + (max-min)/2)
+            2.遍历文件，统计文件的数量 totaal
+            3. 统计 文件中 小于 num的 数量count ，
+                    如果count < total/2,则更新 num = (num + (max-num)/2),重复第3
+                    如果count > total/2,则更新 num = (min + (num-min)/2),重复第3
+                    如果count == total/2,返回符合要求的数字i,结束
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/find_midian_integer/FindMedianInteger.java)
+        
