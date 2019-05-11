@@ -372,4 +372,33 @@ airbed coding
                     如果count > total/2,则更新 num = (min + (num-min)/2),重复第3
                     如果count == total/2,返回符合要求的数字i,结束
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/find_midian_integer/FindMedianInteger.java)
-        
+
+### 题目15：Text Justification（文本左右对齐）leetcode68
+        * 给定一个单词数组和一个长度 maxWidth，重新排版单词，使其成为每行恰好有 maxWidth 个字符，且左右两端对齐的文本。
+          你应该使用“贪心算法”来放置给定的单词；也就是说，尽可能多地往每行中放置单词。必要时可用空格 ' ' 填充，使得每行恰好有 maxWidth 个字符。
+          要求尽可能均匀分配单词间的空格数量。如果某一行单词间的空格不能均匀分配，则左侧放置的空格数要多于右侧的空格数。
+          文本的最后一行应为左对齐，且单词之间不插入额外的空格。
+        * 说明:
+          ● 单词是指由非空格字符组成的字符序列。
+          ● 每个单词的长度大于 0，小于等于 maxWidth。
+          ● 输入单词数组 words 至少包含一个单词。   
+        * 示例:
+          输入:
+            words = ["This", "is", "an", "example", "of", "text", "justification."]
+            maxWidth = 16
+          输出:
+            [
+             "This    is    an",
+             "example  of text",
+             "justification.  "
+           ]  
+##### 思路：
+        * 从最左边的单词开始：left
+          findRight: 找到符合要求的最右边的单词:right
+          justify：将[left,right]调整为一行
+          justify: 所有情况下，我们将每行末尾填充空字符，直到满足maxWidth
+              1. 如果只有一个单词，那这个单词构成本行。
+              2. 如果是最后一行，分隔符是" "。
+              3. 否则，计算单词间的间隔（取整），如果有多余空格（取余），顺序添加到间隔中（每次一个），直到用完。
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/text_justification/TextJustification.java)
+                         
