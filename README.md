@@ -436,4 +436,54 @@ airbed coding
                 ]
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/ip_range_to_cidr/IPRangeToCIDR.java)
  
-         
+### 题目20：Find Case Combinations of a String(找到字符串的所有组合)
+        * 找到字符串的所有字符组合，如："ab"的字符组合按顺序为  "ab", "Ab", "aB", "AB".即（00,10,01,11）.
+        * 因此，你应该输出2^n (n：字符串的字符个数) 个字符串. 
+##### 思路：
+        * 例子：如求“hello" 的第11个组合
+            1.求出10的二进制为01011，倒过来是11010，为1的位上是大写
+            2.所以第11个组合是HElLo
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/find_combination_of_a_string/FindCaseCombinationsofaString.java)
+ 
+### 题目21：csv prase (解析字符串)
+        * 给定字符串，将其正确解析,有些双引号是有意义的不能删除，
+        * 字段的含义依次是：姓名，性别，职业，旅游城市，邮编，家乡，年龄
+        * 示例 1 ：
+                "Jack ""Ma"" Yun",Male,Teacher,"NerYork,ShangHai",000010, Beijing, 23;
+        解析为；[ "Jack "Ma" Yun", "Male", "Teacher", "NerYork,ShangHai", "000010", "Beijing", "23"]
+        * 示例 2        
+                Jack  Yun,Male,Teacher,"NerYork,ShangHai",000010, Beijing, 23";
+        解析为；[ "Jack Yun", "Male", "Teacher", "NerYork,ShangHai", "000010", "Beijing", "23"]
+        * 示例 3  
+                Jack Yun,Male,Teacher,ShangHai,000010, Beijing, 23;
+        解析为；[ "Jack Yun", "Male", "Teacher", "ShangHai", "000010", "Beijing", "23"]
+##### 思路：有限状态机
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/csv_parser/CSVParser.java)
+  
+### 题目22：Pour Water（倒水）
+        * 向凹凸不平的陆地上倒水
+        * 三个输入：
+            heights：数组， heights[i]代表i位置陆地的高度；陆地最左端以外，最右端以外无限高
+            water: 将要倾倒的水量
+            location:和倾倒水的位置
+        * 输出：打印出倒完水后的陆地图案      
+        * 示例 1 ：
+            输入陆地高度 heights int[]{5,4,2,1,3,2,2,1,0,1,4,3} 陆地图案为:
+                +
+                ++        +
+                ++  +     ++
+                +++ +++   ++
+                ++++++++ +++
+                ++++++++++++
+                012345678901（下标）
+            在下标5的位置到8个水，之后陆地变为:
+                +
+                ++        +
+                ++www+    ++
+                +++w+++www++
+                ++++++++w+++
+                ++++++++++++
+                012345678901（下标）
+
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/pour_water/WaterLand.java)
+              
