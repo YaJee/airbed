@@ -494,7 +494,7 @@ airbed coding
 ##### 思路：并查集
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/num_of_intersected_rectangles/NumberofIntersectedRectangles.java)
 
-### 题目23：Finding Ocean(标记海洋)
+### 题目24：Finding Ocean(标记海洋)
         * 给定：String二维数组 ："L"代表陆地，"W"代表海洋
                坐标           ：某一海洋中的一个点
         * 实现：将给定坐标所在海洋全部标记为"O"
