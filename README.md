@@ -517,10 +517,9 @@ airbed coding
 
 ### 题目25：Minimum Vertices to Traverse Directed Graph
         * 给定一个有向图的边集，输出最少数量的点集合，可以从这写点出发遍历整个图。
-        思路：DFS
+##### 思路：DFS
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/min_vertices_to_traverse_directed_graph/MinimumVerticestoTraverseDirectedGraph.java)
        
-            
 ### 题目26：Boggle Game
         * 给定一个字母矩阵（二维数组），和一个单词字典，在字母矩阵中找到最多的互不交叉的单词。           
         * 示例 1 ：
