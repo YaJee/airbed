@@ -487,6 +487,14 @@ airbed coding
 
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/pour_water/WaterLand.java)
 
+### 题目23：Number of Intersected Rectangles(有效矩形的个数)
+        * 给出多个矩形，如果矩形A没有被其他矩形包含，那么矩形A为有效矩形，输出有效矩形的个数。
+        * 如果三个矩形：A包含B,B包含C，则有效矩形数量为1个
+        * 如果三个矩形：A包含B,C不被任何矩形包含，则有效矩形数量为2个
+##### 思路：并查集
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/num_of_intersected_rectangles/NumberofIntersectedRectangles.java)
+
+  
 ### 题目26：Boggle Game
         * 给定一个字母矩阵（二维数组），和一个单词字典，在字母矩阵中找到最多的互不交叉的单词。           
         * 示例 1 ：
