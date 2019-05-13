@@ -486,4 +486,26 @@ airbed coding
                 012345678901（下标）
 
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/pour_water/WaterLand.java)
-              
+
+### 题目26：Boggle Game
+        * 给定一个字母矩阵（二维数组），和一个单词字典，在字母矩阵中找到最多的互不交叉的单词。           
+        * 示例 1 ：
+          输入：
+              字母矩阵：
+                 {
+                    {'o', 'a', 't', 'h'},
+                    {'e', 't', 'a', 'e'},
+                    {'i', 'h', 'k', 'r'},
+                    {'r', 'a', 'i', 'n'}
+            
+                 };
+              单词字典：{"oath", "pea", "eat", "rain"}  
+          输出：
+              {"oath", "eat", "rain"}        
+##### 思路：有限状态机
+        * 1.根据单词，建立字典树
+        * 2.对字母矩阵BFS,查找所有构成一个单词的路径，添加进paths
+        * 3.回溯法：在paths中找互不交叉的单词   
+##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/boggle_game/BoggleGame.java)
+          
+                     
