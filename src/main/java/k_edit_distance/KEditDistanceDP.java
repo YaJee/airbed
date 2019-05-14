@@ -6,6 +6,7 @@ import java.util.List;
 public class KEditDistanceDP {
 
     //获取word1 和 word2的编辑距离
+    //设dp[i][j]: word1前i 到 word2前j的编辑距离
     public int mindistance(String word1, String word2){
         int m = word1.length();
         int n = word2.length();

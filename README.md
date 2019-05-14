@@ -555,5 +555,15 @@ airbed coding
                 k     :2
             输出：
                 [abc, abcd, abd, ad]
+##### 思路：
+        * 动态规划
+        * 设dp[i][j]: word1前i 到 word2前j的编辑距离
+        * Case 1: word1[i] == word2[j], i.e. the ith the jth character matches.
+            f(i, j) = f(i - 1, j - 1)
+         Case 2: word1[i] != word2[j], then we must either insert, delete or replace, whichever is cheaper   
+            f(i, j) = 1 + min { f(i, j - 1), f(i - 1, j), f(i - 1, j - 1) }
+             * f(i, j - 1) represents insert operation
+             * f(i - 1, j) represents delete operation
+             * f(i - 1, j - 1) represents replace operation
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/k_edit_distance/KEditDistanceDP.java)
           
