@@ -541,7 +541,7 @@ airbed coding
         * 3.回溯法：在paths中找互不交叉的单词   
 ##### 代码：[java代码](https://github.com/YaJee/airbed/blob/master/src/main/java/boggle_game/BoggleGame.java)
           
-### 题目26：K Edit Distance (不超过k的编辑距离) (leetcode72 plus )
+### 题目27：K Edit Distance (不超过k的编辑距离) (leetcode72 plus )
         * 两个单词的编辑距离： word1 转换成 word2 所使用的最少操作数 
         * 可使用的操作
           ● 插入一个字符
