@@ -557,7 +557,6 @@ airbed coding
                 [abc, abcd, abd, ad]
 ##### 思路：
         * 动态规划
-        * 设dp[i][j]: word1前i 到 word2前j的编辑距离
         * Case 1: word1[i] == word2[j], i.e. the ith the jth character matches.
             f(i, j) = f(i - 1, j - 1)
          Case 2: word1[i] != word2[j], then we must either insert, delete or replace, whichever is cheaper   
